@@ -1,0 +1,144 @@
+gazman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn$ git clone https://github.com/shahad-mahmud/git_learning.git
+Cloning into 'git_learning'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 592 bytes | 16.00 KiB/s, done.
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn$ git checkout -b azman
+fatal: not a git repository (or any of the parent directories): .git
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn$ ls
+git_learning
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn$ cd git_learnijng
+bash: cd: git_learnijng: No such file or directory
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn$ cd git_learning
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git checkout -b azman
+Switched to a new branch 'azman'
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ touch hello.txt
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git push -u origin azman
+Username for 'https://github.com': azman63
+Password for 'https://azman63@github.com': 
+remote: Permission to shahad-mahmud/git_learning.git denied to azman63.
+fatal: unable to access 'https://github.com/shahad-mahmud/git_learning.git/': The requested URL returned error: 403
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ ^C
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git push -u origin azman
+Username for 'https://github.com': azman63 
+Password for 'https://azman63@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'azman' on GitHub by visiting:
+remote:      https://github.com/shahad-mahmud/git_learning/pull/new/azman
+remote: 
+To https://github.com/shahad-mahmud/git_learning.git
+ * [new branch]      azman -> azman
+Branch 'azman' set up to track remote branch 'azman' from 'origin'.
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git config user.name azman63
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git cnfig user.email 1505063.mka@ugrad.cse.buet.ac.bd
+git: 'cnfig' is not a git command. See 'git --help'.
+
+The most similar command is
+	config
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git config user.email 1505063.mka@ugrad.cse.buet.ac.bd
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git status
+On branch azman
+Your branch is up to date with 'origin/azman'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	hello.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git add .
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git commit -m "first commit"
+[azman 70b6ec0] first commit
+ 1 file changed, 2 insertions(+)
+ create mode 100644 hello.txt
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git status
+On branch azman
+Your branch is ahead of 'origin/azman' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git push
+Username for 'https://github.com': azman63
+Password for 'https://azman63@github.com': 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/shahad-mahmud/git_learning.git/'
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git push
+Username for 'https://github.com': azman63
+Password for 'https://azman63@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/shahad-mahmud/git_learning.git
+   52779f9..70b6ec0  azman -> azman
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git branch
+* azman
+  main
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git branch -r
+  origin/HEAD -> origin/main
+  origin/azman
+  origin/main
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git branch -a
+* azman
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/azman
+  remotes/origin/main
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git remote add origin https://github.com/shahad-mahmud/git_learning.git
+fatal: remote origin already exists.
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git branch -a
+* azman
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/azman
+  remotes/origin/main
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git branch
+* azman
+  main
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git merge dev_shahad dev
+merge: dev_shahad - not something we can merge
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git merge origin/dev
+merge: origin/dev - not something we can merge
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git fetch --all
+Fetching origin
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 9 (delta 1), reused 9 (delta 1), pack-reused 0
+Unpacking objects: 100% (9/9), 909 bytes | 7.00 KiB/s, done.
+From https://github.com/shahad-mahmud/git_learning
+ * [new branch]      dev        -> origin/dev
+ * [new branch]      dev-shahad -> origin/dev-shahad
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git merge origin/dev
+CONFLICT (add/add): Merge conflict in hello.txt
+Auto-merging hello.txt
+Automatic merge failed; fix conflicts and then commit the result.
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git add .
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git commit -m "merging"
+[azman 01adc66] merging
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git push origin azman
+Username for 'https://github.com': azman63
+Password for 'https://azman63@github.com': 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 386 bytes | 386.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/shahad-mahmud/git_learning.git
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git merge origin/dev-shahad
+Auto-merging hello.txt
+CONFLICT (content): Merge conflict in hello.txt
+Automatic merge failed; fix conflicts and then commit the result.
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git add .
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ git push origin azman
+Username for 'https://github.com': azman63
+Password for 'https://azman63@github.com': 
+Everything up-to-date
+azman@azman-Nitro-AN515-44:~/ReveSystem/githubLearn/git_learning$ 
+
+
